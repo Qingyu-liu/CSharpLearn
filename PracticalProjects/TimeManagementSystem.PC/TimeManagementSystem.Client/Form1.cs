@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeManagementSystem.DAL;
 
 namespace TimeManagementSystem.PC
 {
@@ -78,6 +80,37 @@ namespace TimeManagementSystem.PC
             {
                 this.TheTaskList.Items.Remove(selectItem);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<Model.Task> tasks = new List<Model.Task>();
+            //数据库连接字符串
+            var connectionString = "Data Source=C:\\Users\\Lulu\\Desktop\\CSharpLearn\\PracticalProjects\\TimeManagementSystemDatabase.db;Version=3;";
+            //数据库连接SQLiteConnection
+            using (SQLiteConnection cn = new SQLiteConnection(connectionString))
+            {
+                //打开连接
+                cn.Open();
+                //创建命令
+                SQLiteCommand cmd = new SQLiteCommand($"select * from Task", cn);
+                var reader= cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    Model.Task task = new Model.Task();
+                    task.Id= reader[$"{nameof(TimeManagementSystem.Model.Task.Id)}"].ToString();
+                    task.Name = reader[$"{nameof(TimeManagementSystem.Model.Task.Name)}"].ToString();
+                    //todo 其他字段的存放
+                    tasks.Add(task);
+                }
+
+                //cmd.ExecuteNonQuery
+                //sql update
+                //sql insert
+            }
+
+            
+
         }
     }
 }

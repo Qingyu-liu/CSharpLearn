@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManagementSystem.Window
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManagementSystem.Client", "TimeManagementSystem.Client\TimeManagementSystem.Client.csproj", "{0C83BDC7-8AEE-4393-882F-352B63788427}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManagementSystem.Model", "TimeManagementSystem.Model\TimeManagementSystem.Model.csproj", "{585E3F02-9F49-4798-945D-AF4ADF434A34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeManagementSystem.DAL", "TimeManagementSystem.DAL\TimeManagementSystem.DAL.csproj", "{8AB73152-0F7C-45E4-93B2-6E90165F7FAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{0C83BDC7-8AEE-4393-882F-352B63788427}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C83BDC7-8AEE-4393-882F-352B63788427}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C83BDC7-8AEE-4393-882F-352B63788427}.Release|Any CPU.Build.0 = Release|Any CPU
+		{585E3F02-9F49-4798-945D-AF4ADF434A34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{585E3F02-9F49-4798-945D-AF4ADF434A34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{585E3F02-9F49-4798-945D-AF4ADF434A34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{585E3F02-9F49-4798-945D-AF4ADF434A34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB73152-0F7C-45E4-93B2-6E90165F7FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB73152-0F7C-45E4-93B2-6E90165F7FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB73152-0F7C-45E4-93B2-6E90165F7FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB73152-0F7C-45E4-93B2-6E90165F7FAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
